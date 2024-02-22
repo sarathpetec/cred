@@ -67,6 +67,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>spring-boot-cred</finalName>
 	</build>
 
 </project>
