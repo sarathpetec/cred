@@ -18,9 +18,9 @@ public class Skill {
 
     @Id
     private String id;
+    private String userId;
     private String skillName;
     private Proficiency proficiency;
-    private String userId;
     private LocalDateTime created_on;
     private LocalDateTime updated_on;
 
