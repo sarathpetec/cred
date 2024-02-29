@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 public class User {
 
     @Id
-    private int id;
+    private String id;
     private String username;
     private String email;
     private LocalDateTime created_on;

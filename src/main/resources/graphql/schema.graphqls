@@ -1,0 +1,47 @@
+type Query {
+    getAllUsers: [User]
+    getUserById(id: ID!): User
+    getUsersByName(name: String): [User]
+}
+
+type User {
+    id: ID!
+    name: String
+    email: String
+    userProfile: UserProfile
+}
+
+type UserProfile{
+    id: ID!
+    firstName: String
+    lastName: String
+    yearsOfExperience: Int
+    currentRole: String
+    skills: [Skill]
+}
+
+type Skill{
+    id: ID!
+    skillName: String
+    proficiency: String
+}
+
+type Language{
+    id: ID!
+    language: String
+    proficiency: String
+}
+
+type Mutation {
+    addUser(userInput: UserInput) : User
+
+}
+
+input UserInput {
+
+    firstName:String
+    lastName:String
+    email:String
+    yearsOfExperience: Int
+    role: String
+}

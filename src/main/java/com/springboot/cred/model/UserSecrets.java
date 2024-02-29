@@ -13,14 +13,17 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Document(collection = "languages")
-public class LanguageProficiency {
+@Document(collection = "credentialManager")
+public class UserSecrets {
 
     @Id
-    private int id;
-    private String language;
-    private Proficiency proficiency;
-    private int userId;
+    private String id;
+    private String accountId;
+    private String username;
+    private String password;
     private LocalDateTime created_on;
+    private LocalDateTime expiry_date;
     private LocalDateTime last_updated;
+
+
 }
