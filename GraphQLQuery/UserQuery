@@ -1,0 +1,11 @@
+mutation {
+  addUser(userInput:
+    {firstName:"Rishma",
+      lastName:"Sankarbabu",
+      email:"rishma.sankarbabu@nexergroup.com",
+      yearsOfExperience:12,
+      role:"Backend Developer"})
+    {
+       id
+    }
+}

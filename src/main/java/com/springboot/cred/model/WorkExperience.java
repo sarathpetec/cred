@@ -17,13 +17,13 @@ import java.time.LocalDateTime;
 public class WorkExperience {
 
     @Id
-    private int id;
+    private String id;
     private String companyName;
     private LocalDateTime start_year;
     private LocalDateTime end_year;
     private boolean onGoing;
     private String role;
-    private int userId;
+    private String userId;
     private LocalDateTime created_on;
     private LocalDateTime last_updated;
 

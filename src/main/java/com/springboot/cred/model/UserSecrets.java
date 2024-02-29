@@ -14,10 +14,10 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 @Document(collection = "credentialManager")
-public class CredentialManager {
+public class UserSecrets {
 
     @Id
-    private int id;
+    private String id;
     private String accountId;
 
     private String username;
