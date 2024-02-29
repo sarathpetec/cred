@@ -16,8 +16,8 @@ import java.util.List;
 public class UserProfile {
 
     @Id
-    private int id;
-    private int userId;
+    private String id;
+    private String userId;
     private String firstName;
     private String lastName;
     private int yearsOfExperience;

@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 public class Company {
 
     @Id
-    private int id;
+    private String id;
     private String name;
     private String code;
     private String location;

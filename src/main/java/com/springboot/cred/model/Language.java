@@ -14,13 +14,13 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Builder
 @Document(collection = "languages")
-public class LanguageProficiency {
+public class Language {
 
     @Id
-    private int id;
+    private String id;
     private String language;
     private Proficiency proficiency;
-    private int userId;
+    private String userId;
     private LocalDateTime created_on;
     private LocalDateTime last_updated;
 }

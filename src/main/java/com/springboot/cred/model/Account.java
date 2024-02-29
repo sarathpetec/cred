@@ -17,9 +17,9 @@ import java.time.LocalDateTime;
 public class Account {
 
     @Id
-    private int id;
-    private int userId;
-    private int companyId;
+    private String id;
+    private String userId;
+    private String companyId;
     private String status;
     private LocalDateTime created_on;
     private LocalDateTime last_updated;
