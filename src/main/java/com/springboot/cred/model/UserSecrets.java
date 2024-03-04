@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Document(collection = "credentialManager")
+@Document(collection = "user_secrets")
 public class UserSecrets {
 
     @Id
