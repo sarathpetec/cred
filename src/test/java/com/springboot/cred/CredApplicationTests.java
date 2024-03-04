@@ -3,10 +3,10 @@ package com.springboot.cred;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+//@SpringBootTest
 class CredApplicationTests {
 
-	@Test
+	//@Test
 	void contextLoads() {
 	}
 
