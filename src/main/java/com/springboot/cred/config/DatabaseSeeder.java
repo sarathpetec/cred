@@ -45,7 +45,7 @@ public class DatabaseSeeder {
 
             Account account_sarath = Account.builder()
                     .id("1")
-                    .userId("sarath")
+                    .userId("1")
                     .companyId("1")
                     .status("active")
                     .created_on(LocalDateTime.now())
@@ -54,7 +54,7 @@ public class DatabaseSeeder {
             Account account_siva =
                     Account.builder()
                             .id("2")
-                            .userId("siva")
+                            .userId("2")
                             .companyId("1")
                             .status("active")
                             .created_on(LocalDateTime.now())

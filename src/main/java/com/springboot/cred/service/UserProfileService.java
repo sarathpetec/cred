@@ -11,6 +11,10 @@ public class UserProfileService {
     @Autowired
     private UserProfileRepository userProfileRepository;
 
+    public UserProfileService(UserProfileRepository userProfileRepository) {
+        this.userProfileRepository = userProfileRepository;
+    }
+
     public void addUserProfile(UserProfile userProfile) {
         userProfileRepository.save(userProfile);
     }

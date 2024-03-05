@@ -8,6 +8,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -23,6 +24,9 @@ public class UserProfile {
     private String lastName;
     private int yearsOfExperience;
     private String currentRole;
+    private List<Skill> skills;
+    private List<Language> languages;
+    private List<WorkExperience> workExperiences;
     private LocalDateTime created_on;
     private LocalDateTime last_updated;
 

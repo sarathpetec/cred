@@ -1,11 +1,48 @@
 mutation {
-  addUser(userInput:
-    {firstName:"Rishma",
-      lastName:"Sankarbabu",
-      email:"rishma.sankarbabu@nexergroup.com",
+  addUserProfile(userInput:
+    { firstName:"Sarath",
+      lastName:"Nair",
       yearsOfExperience:12,
-      role:"Backend Developer"})
+      role:"Backend Developer"
+      skills: [{
+        skillName:"Java",
+        proficiency: "HIGH_COMPETENCE"
+      },
+        {
+          skillName:"Spring Boot"
+          proficiency:"HIGH_COMPETENCE"
+        },
+        {
+          skillName:"MongoDB"
+          proficiency:"INTERMEDIATE"
+        }
+      ],
+      languages: [
+      {
+        languageName: "English",
+        languageLevel: "C2"
+      },
+      {
+        languageName: "Swedish",
+        languageLevel: "A2"
+      }
+    ]
+    })
     {
        id
     }
+}
+
+query{
+  getUserById(id:"1")
+  {
+    firstName,
+    lastName,
+     currentRole,
+    skills{
+      skillName
+      proficiency
+    }
+
+  }
 }

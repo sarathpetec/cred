@@ -1,28 +1,6 @@
 package com.springboot.cred.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-import java.time.LocalDateTime;
-
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
-@Document(collection = "skills")
-public class Skill {
-
-    @Id
-    private String id;
-    private String userId;
-    private String skillName;
-    private Proficiency proficiency;
-    private LocalDateTime created_on;
-    private LocalDateTime updated_on;
+public record Skill(String skillName,Proficiency proficiency){
 
 }
 

@@ -1,47 +1,55 @@
 type Query {
     getAllUsers: [User]
-    getUserById(id: ID!): User
-    getUsersByName(name: String): [User]
+    getUserById(id: ID!): UserProfile
+    getUsersByName(name: String): [UserProfile]
 }
 
 type User {
     id: ID!
-    name: String
-    email: String
-    userProfile: UserProfile
+    username: String!
 }
 
 type UserProfile{
     id: ID!
-    firstName: String
-    lastName: String
-    yearsOfExperience: Int
-    currentRole: String
-    skills: [Skill]
+    firstName: String!
+    lastName: String!
+    email: String!
+    yearsOfExperience: Int!
+    currentRole: String!
+    skills: [Skill!]!
+    languages: [Language!]!
 }
 
 type Skill{
-    id: ID!
-    skillName: String
+    skillName: String!
     proficiency: String
 }
 
 type Language{
-    id: ID!
-    language: String
-    proficiency: String
+    language: String!
+    languageLevel: String!
+}
+
+
+input AddUserProfileInput {
+    firstName:String!
+    lastName:String!
+    yearsOfExperience: Int!
+    role: String!
+    skills: [SkillInput!]!
+    languages: [LanguageInput!]!
+}
+
+input SkillInput {
+    skillName : String!
+    proficiency: String!
+}
+input LanguageInput {
+    languageName: String!
+    languageLevel: String!
 }
 
 type Mutation {
-    addUser(userInput: UserInput) : User
+    addUserProfile(userInput: AddUserProfileInput): UserProfile!
 
-}
-
-input UserInput {
-
-    firstName:String
-    lastName:String
-    email:String
-    yearsOfExperience: Int
-    role: String
 }
