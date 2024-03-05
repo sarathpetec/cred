@@ -1,0 +1,55 @@
+type Query {
+    getAllUsers: [User]
+    getUserById(id: ID!): UserProfile
+    getUsersByName(name: String): [UserProfile]
+}
+
+type User {
+    id: ID!
+    username: String!
+}
+
+type UserProfile{
+    id: ID!
+    firstName: String!
+    lastName: String!
+    email: String!
+    yearsOfExperience: Int!
+    currentRole: String!
+    skills: [Skill!]!
+    languages: [Language!]!
+}
+
+type Skill{
+    skillName: String!
+    proficiency: String
+}
+
+type Language{
+    language: String!
+    languageLevel: String!
+}
+
+
+input AddUserProfileInput {
+    firstName:String!
+    lastName:String!
+    yearsOfExperience: Int!
+    role: String!
+    skills: [SkillInput!]!
+    languages: [LanguageInput!]!
+}
+
+input SkillInput {
+    skillName : String!
+    proficiency: String!
+}
+input LanguageInput {
+    languageName: String!
+    languageLevel: String!
+}
+
+type Mutation {
+    addUserProfile(userInput: AddUserProfileInput): UserProfile!
+
+}
